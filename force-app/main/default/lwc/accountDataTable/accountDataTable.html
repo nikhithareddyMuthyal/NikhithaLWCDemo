@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-05-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Financial Services Account Listing">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" label="Search" onchange={handleSearch} class="slds-m-bottom_medium"></lightning-input>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                onsort={handleSort}
+                onrowaction={handleRowAction}
+                hide-checkbox-column="true"
+                show-row-number-column="true">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
